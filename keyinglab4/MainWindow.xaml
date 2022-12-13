@@ -1,0 +1,53 @@
+﻿<Window x:Class="keyinglab4.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:keyinglab4"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="479" Width="1142">
+    <Grid Height="462" VerticalAlignment="Top" Background="#FF598EAF">
+        <Label Content="Frist name" HorizontalAlignment="Left" Margin="27,33,0,0" VerticalAlignment="Top" Background="{x:Null}" Foreground="#FF101010" FontFamily="Bahnschrift"/>
+        <TextBox x:Name="fnbox" HorizontalAlignment="Left" Margin="97,37,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Height="20" />
+        <Label Content="Last Name" HorizontalAlignment="Left" Margin="29,105,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.41,1.003" Foreground="#FF040404" FontFamily="Bahnschrift"/>
+        <TextBox x:Name="lnbox" HorizontalAlignment="Left" Margin="97,105,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Height="22" FontFamily="Bahnschrift"/>
+        <Label Content="Company Name" HorizontalAlignment="Left" Margin="244,33,0,0" VerticalAlignment="Top" RenderTransformOrigin="2.941,-0.73" Foreground="#FF0C0C0C" FontFamily="Bahnschrift"/>
+        <TextBox x:Name="cnbox" HorizontalAlignment="Left" Margin="345,37,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Height="20"/>
+        <Label Content="Email" HorizontalAlignment="Left" Margin="46,172,0,0" VerticalAlignment="Top" FontFamily="Bahnschrift" Background="{x:Null}" Foreground="#FF0C0C0C"/>
+        <TextBox x:Name="embox" HorizontalAlignment="Left" Margin="97,172,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" FontFamily="Bahnschrift" Height="24"/>
+        <TextBox x:Name="phbox" HorizontalAlignment="Left" Margin="345,105,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Height="22" FontFamily="Bahnschrift"/>
+        <Label Content="Phone" HorizontalAlignment="Left" Margin="292,105,0,0" VerticalAlignment="Top" Foreground="#FF040404" FontFamily="Bahnschrift"/>
+        <Label Content="Address line1" HorizontalAlignment="Left" Margin="14,248,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.138,0.579" FontFamily="Bahnschrift" Background="{x:Null}" Foreground="#FF0C0C0C"/>
+        <TextBox x:Name="addbox1" HorizontalAlignment="Left" Margin="101,248,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" FontFamily="Bahnschrift" Height="24"/>
+        <TextBox x:Name="addbox2" HorizontalAlignment="Left" Margin="354,244,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" FontFamily="Bahnschrift" Height="24"/>
+        <Label Content="Address line2" HorizontalAlignment="Left" Margin="265,244,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.316,0.888" FontFamily="Bahnschrift" Background="{x:Null}" Foreground="#FF100F0F"/>
+        <Label Content="City" HorizontalAlignment="Left" Margin="62,306,0,0" VerticalAlignment="Top" FontFamily="Bahnschrift" Foreground="#FF0C0C0C"/>
+        <TextBox x:Name="citybox" HorizontalAlignment="Left" Margin="101,306,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" FontFamily="Bahnschrift" Height="27"/>
+        <TextBox x:Name="provbox" HorizontalAlignment="Left" Margin="354,306,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" FontFamily="Bahnschrift" Height="24"/>
+        <Label Content="Province" HorizontalAlignment="Left" Margin="277,306,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.5,1.196" FontFamily="Bahnschrift" Foreground="#FF060606"/>
+        <Label Content="Country" HorizontalAlignment="Left" Margin="40,361,0,0" VerticalAlignment="Top" FontFamily="Bahnschrift" Foreground="#FF0A0A0A"/>
+        <Label Content="postal Code" HorizontalAlignment="Left" Margin="270,363,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.211,0.965" FontFamily="Bahnschrift" Foreground="#FF0A0A0A"/>
+        <TextBox x:Name="countrybox" HorizontalAlignment="Left" Margin="101,366,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" FontFamily="Bahnschrift" Height="23"/>
+        <TextBox x:Name="pcodebox" HorizontalAlignment="Left" Margin="354,366,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" FontFamily="Bahnschrift" Height="23"/>
+        <Button Content="Add" HorizontalAlignment="Left" Margin="145,414,0,0" VerticalAlignment="Top" Click="Button_Click" FontFamily="Bahnschrift" RenderTransformOrigin="0.488,1.531" Height="23" Width="72"/>
+        <Button Content="Update" HorizontalAlignment="Left" Margin="271,414,0,0" VerticalAlignment="Top" Click="Button_Click_1" FontFamily="Bahnschrift" Height="23" Width="72"/>
+        <DataGrid x:Name="gridCustomers" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="499,0,0,177" SelectionChanged="gridCustomers_SelectionChanged" FontFamily="Bahnschrift"/>
+        <Button x:Name="deleteBtn" Content="Delete" HorizontalAlignment="Left" Margin="499,295,0,0" VerticalAlignment="Top" Click="deleteBtn_Click" RenderTransformOrigin="0.026,0.453" Width="84" Height="31" Background="#FFDDDDDD" FontFamily="Bahnschrift"/>
+        <TextBox x:Name="searchBox" HorizontalAlignment="Left" Margin="959,300,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" FontFamily="Bahnschrift" Height="23"/>
+        <Button x:Name="searchBtn" Content="Search" HorizontalAlignment="Left" Margin="1084,300,0,0" VerticalAlignment="Top" Click="searchBox_Click" Height="26"/>
+        <Label Content="please input customer Id:" HorizontalAlignment="Left" Margin="811,300,0,0" VerticalAlignment="Top" FontFamily="Bahnschrift"/>
+        <Button x:Name="question4" Content="get all customers from canada" HorizontalAlignment="Left" Margin="499,404,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.379,1.104" Width="200" Click="Button_Click_2" Height="35" FontFamily="Bahnschrift"/>
+        <Button x:Name="clearBtn" Content="Clear" HorizontalAlignment="Left" Margin="396,414,0,0" VerticalAlignment="Top" Click="clearBtn_Click" FontFamily="Bahnschrift" Height="23" Width="69"/>
+        <Button x:Name="refreshBtn" Content="Show All" HorizontalAlignment="Left" Margin="621,295,0,0" VerticalAlignment="Top" Width="85" Height="31" Click="Button_Click_3" RenderTransformOrigin="0.5,0.5" FontFamily="Bahnschrift">
+            <Button.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-0.983"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Button.RenderTransform>
+        </Button>
+
+    </Grid>
+</Window>
